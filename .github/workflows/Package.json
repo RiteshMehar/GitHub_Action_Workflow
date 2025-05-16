@@ -1,0 +1,12 @@
+{
+  "name": "github-action-workflow",
+  "version": "1.0.0",
+  "description": "A simple Node.js project for GitHub Actions workflow",
+  "main": "index.js",
+  "scripts": {
+    "build": "echo \"Building the project...\"",
+    "test": "echo \"Running tests...\" && exit 0"
+  },
+  "author": "Ritesh",
+  "license": "MIT"
+}
