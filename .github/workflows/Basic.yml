@@ -6,15 +6,22 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: centos-latest
     steps:
-      - name: Install Dependencies
-        run: npm install
+      - name: Install httpd
+        run: |
+          sudo yum update -y
+          sudo yum install httpd -y
+          
+      - name: copy web pages
+        run: echo "hello httpd" > /var/www/html/index.html
 
-      - name: My new message
-        run: echo "Hello from github action"
-        
-     
+      - name: Start services
+        run: |
+          sudo systemctl start httpd
+          sudo systemctl enabled httpd
+          
+      
 
 
 
