@@ -8,13 +8,17 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout code
+        uses: actions/checkout@v3
+        
       - name: Install Apache
         run: |
           sudo apt update -y
-          sudo apt-get install apache2 -y
+          sudo apt install apache2 -y
           
       - name: copy web pages
-        run: echo "hello apache2" > /var/www/html/index.html
+        run: |
+          echo "hello apache2" | sudo /var/www/html/index.html
 
       - name: Start services
         run: |
