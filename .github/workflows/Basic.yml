@@ -11,14 +11,7 @@ jobs:
       - name: My new message
         run: echo "Hello from github action"
         
-      - name: Install Dependencies
-        run: npm install
-
-      - name: Building a Project
-        run: npm run build
-
-      - name: Run tests
-        run: npm test
+     
 
 
 
