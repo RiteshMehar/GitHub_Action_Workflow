@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: My new message
-        run: echo"Hello from github action"
+        run: echo "Hello from github action"
         
       - name: Install Dependencies
         run: npm install
