@@ -8,14 +8,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repository
-        uses: actions/checkout@v3
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
-
+      - name: My new message
+        run: echo"Hello from github action"
+        
       - name: Install Dependencies
         run: npm install
 
