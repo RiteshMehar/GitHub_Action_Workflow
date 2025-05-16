@@ -24,6 +24,9 @@ jobs:
         run: |
           sudo systemctl start apache2
           sudo systemctl enable apache2
+
+      - name: Server is running
+        run: curl -I http://localhost
           
       
 
