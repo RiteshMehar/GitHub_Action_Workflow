@@ -23,7 +23,7 @@ jobs:
       - name: Start services
         run: |
           sudo systemctl start apache2
-          sudo systemctl enabled apache2
+          sudo systemctl enable apache2
           
       
 
