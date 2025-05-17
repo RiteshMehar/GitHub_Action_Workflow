@@ -11,7 +11,7 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v3
         
-      - name: docker buildx
+      - name: docker to build a image
         uses: docker/setup-buildx-action@v3
 
       - name: login to docker hub
@@ -20,7 +20,7 @@ jobs:
           username: ${{secrets.DOCKER_USERNAME}}
           password: ${{secrets.DOCKER_PASSWORD}}
           
-      - name: docker build and push
+      - name: docker to build and push the image
         uses: docker/build-push-action@v6
         with:
           context: .
